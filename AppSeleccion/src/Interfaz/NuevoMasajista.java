@@ -5,7 +5,7 @@
  */
 package Interfaz;
 import Logica.*;
-import static Logica.ArregloGlobal.ArregloSeleccion;
+import static Datos.ArregloGlobal.ArregloSeleccion;
 
 /**
  *
@@ -35,7 +35,7 @@ public class NuevoMasajista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Btn_AñadirMasajista = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        MensajeCon = new javax.swing.JLabel();
+        MensajeConcentrarse = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         MensajeViaja = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -45,6 +45,8 @@ public class NuevoMasajista extends javax.swing.JFrame {
         CdeT_Apellidos = new javax.swing.JTextField();
         CdeT_Edad = new javax.swing.JTextField();
         Btn_Regresar = new javax.swing.JButton();
+        MensajeJuega = new javax.swing.JLabel();
+        MensajeEntrena = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,9 +139,11 @@ public class NuevoMasajista extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Btn_AñadirMasajista, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                            .addComponent(MensajeCon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(MensajeViaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Btn_Regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(Btn_Regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MensajeJuega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MensajeEntrena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -153,7 +157,6 @@ public class NuevoMasajista extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(CdeT_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -175,10 +178,14 @@ public class NuevoMasajista extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(Btn_AñadirMasajista, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MensajeCon, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeViaja, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MensajeJuega, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MensajeEntrena, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(Btn_Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
@@ -218,6 +225,7 @@ public class NuevoMasajista extends javax.swing.JFrame {
         int Edad = Integer.parseInt(CdeT_Edad.getText());
         String titulacion = CdeT_Titulación.getText();
         int aniosExpereiencia = Integer.parseInt(CdeT_AE.getText());
+        NvoMasajista.setProfesion("Masajista");
         
         NvoMasajista.setId(id);
         NvoMasajista.setNombre(Nombre);
@@ -225,9 +233,11 @@ public class NuevoMasajista extends javax.swing.JFrame {
         NvoMasajista.setEdad(Edad);
         NvoMasajista.setTitulacion(titulacion);
         NvoMasajista.setAniosExperiencia(aniosExpereiencia);
-
-        MensajeCon.setText((NvoMasajista.Concentrarse()));
-        MensajeViaja.setText((NvoMasajista.Viaja()));
+        
+        MensajeConcentrarse.setText(NvoMasajista.Concentrarse());
+        MensajeViaja.setText(NvoMasajista.Viaja());
+        MensajeEntrena.setText(NvoMasajista.Entrenar());
+        MensajeJuega.setText(NvoMasajista.jugarPartido());
         
         ArregloSeleccion.add(NvoMasajista);
     }//GEN-LAST:event_Btn_AñadirMasajistaActionPerformed
@@ -283,7 +293,9 @@ public class NuevoMasajista extends javax.swing.JFrame {
     private javax.swing.JTextField CdeT_ID;
     private javax.swing.JTextField CdeT_Nombre;
     private javax.swing.JTextField CdeT_Titulación;
-    private javax.swing.JLabel MensajeCon;
+    private javax.swing.JLabel MensajeConcentrarse;
+    private javax.swing.JLabel MensajeEntrena;
+    private javax.swing.JLabel MensajeJuega;
     private javax.swing.JLabel MensajeViaja;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

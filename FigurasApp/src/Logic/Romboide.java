@@ -13,14 +13,14 @@ public class Romboide extends Figura {
         super();
     }
 
-        @Override
-    public void Area(int base, int altura){
+    @Override
+    public void Area() {
         area = (base*altura);
     }
 
-        @Override
-    public void Perimetro(int base, int altura){
-        perimetro= (base*3);
+    @Override
+    public void Perimetro() {
+                perimetro= (base*3);
     }
     
 }

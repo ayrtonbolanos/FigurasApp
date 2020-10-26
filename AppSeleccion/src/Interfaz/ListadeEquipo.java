@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import Datos.ArregloGlobal;
 import Logica.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -90,17 +91,19 @@ public class ListadeEquipo extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         DefaultTableModel modelo = new DefaultTableModel();
         
+        modelo.addColumn("Profesion");
         modelo.addColumn("ID");
         modelo.addColumn("Nombre");
         modelo.addColumn("Apellidos");
         modelo.addColumn("Edad");
         
         for(Selección seleccion :  ArregloGlobal.ArregloSeleccion){
-            Object [] fila = new Object [4];
-            fila[0] = seleccion.getId();
-            fila[1] = seleccion.getNombre();
-            fila[2] = seleccion.getApellidos();
-            fila[3] = seleccion.getEdad();
+            Object [] fila = new Object [5];
+            fila[0] = seleccion.getProfesion();
+            fila[1] = seleccion.getId();
+            fila[2] = seleccion.getNombre();
+            fila[3] = seleccion.getApellidos();
+            fila[4] = seleccion.getEdad();
             
             modelo.addRow(fila);
         }

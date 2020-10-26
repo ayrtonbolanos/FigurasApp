@@ -40,17 +40,25 @@ public class Masajista extends Selección {
     public void setAniosExperiencia(int aniosExperiencia) {
         this.aniosExperiencia = aniosExperiencia;
     }
-
-    //Concentrarse
+    
     @Override
-    public void Concentrarse(){
-        System.out.println("El MASJITSTA va a la concentración.");
+    public String Concentrarse(){
+        return mnsjConcen;
     }
-
-    //Viajar
+    
     @Override
-    public void Viaja(){
-        System.out.println("El MASJISTA viaja al partido.");
+    public String Viaja(){
+        return mnsjViaja;
+    }
+    
+    @Override
+    public String Entrenar(){
+        return mnsjEntrena;
+    }
+    
+    @Override
+    public String jugarPartido(){
+        return mnsjJuega;
     }
     
 }

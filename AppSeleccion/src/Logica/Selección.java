@@ -5,15 +5,23 @@
  */
 package Logica;
 
+
 /**
  *
  * @author ayrto
  */
-public class Selección {
+public abstract class Selección implements SeleccionInterface {
     protected int id;
     protected String Nombre;
     protected String Apellidos;
     protected int Edad;
+    protected String Profesion;
+    protected String mnsjConcen="Va a la Concentración";
+    protected String mnsjViaja="Viaja al Partido";
+    protected String mnsjEntrena="Se presenta en el Entrenamiento";
+    protected String mnsjJuega="Va al Juego";
+
+
     
     public Selección(){
 
@@ -25,8 +33,10 @@ public class Selección {
         this.Edad=Edad;
     }
 
-    //MétodosSET
-    
+    //MétodosGET
+    public String getProfesion() {
+    return Profesion;
+    }
     public int getId() {
         return id;
     }
@@ -40,8 +50,11 @@ public class Selección {
         return Edad;
     }
     
-    //MétodosGET
-    
+    //MétodosSET
+
+    public void setProfesion(String Profesion) {
+        this.Profesion = Profesion;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -54,19 +67,28 @@ public class Selección {
     public void setEdad(int Edad) {
         this.Edad = Edad;
     }
-    
-    //Concentrarse
-    
-    public void Concentrarse(){
-        
+
+    @Override
+    public String Concentrarse(){
+        return mnsjConcen;
     }
     
-        
-    //Viajar
-    
-    public void Viaja(){
-        
+    @Override
+    public String Viaja(){
+        return mnsjViaja;
     }
+    
+    @Override
+    public String Entrenar(){
+        return mnsjEntrena;
+    }
+    
+    @Override
+    public String jugarPartido(){
+        return mnsjJuega;
+    }
+    
+
 
     
 }

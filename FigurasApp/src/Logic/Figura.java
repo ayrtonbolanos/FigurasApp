@@ -1,12 +1,7 @@
 package Logic;
+import static Datos.Global.ArregloFiguras;
 
-/**
- *
- * @author ayrto
- */
-import Logic.Global;
-
-public class Figura {
+public abstract class Figura implements FigurasInterface {
     protected int base;
     protected int altura;
     protected float area;
@@ -20,9 +15,9 @@ public class Figura {
     public Figura(int base, int altura){
         this.base=base;
         this.altura=altura;
-        this.nombre=nombre;
     }
 
+    
         
     public void Area(int base, int altura){
  
@@ -32,31 +27,30 @@ public class Figura {
 
     }
 
+    //Métodos Get y Set
+    
     public void setBase(int base) {
         this.base = base;
     }
-
     public void setAltura(int altura) {
         this.altura = altura;
     }
-    
-        public float getArea() {
-        return area;
+    public float getArea() {
+    return area;
+}
+    public float getPerimetro() {
+    return perimetro;
+}
+    public float getBase(){
+        return base;
+ }
+    public float getAltura(){
+        return altura;
+}
+    public void setNombre (String nombre){
+        this.nombre=nombre;
     }
-
-        public float getPerimetro() {
-        return perimetro;
-    }
-        public float getBase(){
-            return base;
-     }
-        public float getAltura(){
-            return altura;
-    }
-        public void setNombre (String nombre){
-            this.nombre=nombre;
-        }
-        public String getNombre(){
-        return nombre;
-    }
+    public String getNombre(){
+    return nombre;
+}
 }

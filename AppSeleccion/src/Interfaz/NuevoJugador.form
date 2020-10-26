@@ -51,7 +51,7 @@
                           <Component id="Btn_AñadirJugador" pref="291" max="32767" attributes="0"/>
                           <Component id="MensajeJuega" max="32767" attributes="0"/>
                           <Component id="MensajeEntrena" max="32767" attributes="0"/>
-                          <Component id="MensajeConcentra" max="32767" attributes="0"/>
+                          <Component id="MensajeConcentrarse" max="32767" attributes="0"/>
                           <Component id="MensajeViaja" max="32767" attributes="0"/>
                           <Component id="Btn_Regresar" max="32767" attributes="0"/>
                       </Group>
@@ -102,7 +102,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MensajeEntrena" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="MensajeConcentra" min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="MensajeConcentrarse" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MensajeViaja" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace pref="51" max="32767" attributes="0"/>
@@ -185,7 +185,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="MensajeEntrena">
     </Component>
-    <Component class="javax.swing.JLabel" name="MensajeConcentra">
+    <Component class="javax.swing.JLabel" name="MensajeConcentrarse">
     </Component>
     <Component class="javax.swing.JLabel" name="MensajeViaja">
     </Component>

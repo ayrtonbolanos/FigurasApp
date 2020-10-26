@@ -39,27 +39,27 @@ public class Jugador extends Selección {
     public void setDemarcacion(String demarcacion) {
             this.demarcacion = demarcacion;
     }
+    
+    //Métodos en Común
 
-    //MÉTODO JUGAR PARTIDO
-    public void jugarPartido() {
-            System.out.println("Juega un partido");
-    }
-
-    // MÉTODO ENTRENAR
-    public void entrenar() {
-            System.out.println("Entrena");
-    }
-
-    //Concentrarse
     @Override
-    public void Concentrarse(){
-        System.out.println("El JUGADOR va a la concentración.");
+    public String Concentrarse(){
+        return mnsjConcen;
     }
-
-    //Viajar
+    
     @Override
-    public void Viaja(){
-        System.out.println("El JUGADOR va a la concentración.");
+    public String Viaja(){
+        return mnsjViaja;
+    }
+    
+    @Override
+    public String Entrenar(){
+        return mnsjEntrena;
+    }
+    
+    @Override
+    public String jugarPartido(){
+        return mnsjJuega;
     }
         
         

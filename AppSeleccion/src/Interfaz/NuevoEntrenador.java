@@ -5,7 +5,7 @@
  */
 package Interfaz;
 
-import static Logica.ArregloGlobal.ArregloSeleccion;
+import static Datos.ArregloGlobal.ArregloSeleccion;
 import Logica.*;
 
 /**
@@ -35,7 +35,7 @@ public class NuevoEntrenador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Btn_AñadirEntrenador = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        MensajeCon = new javax.swing.JLabel();
+        MensajeConcentrarse = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         MensajeViaja = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -44,6 +44,8 @@ public class NuevoEntrenador extends javax.swing.JFrame {
         CdeT_Apellidos = new javax.swing.JTextField();
         CdeT_Edad = new javax.swing.JTextField();
         Btn_Regresar = new javax.swing.JButton();
+        MensajeJuega = new javax.swing.JLabel();
+        MensajeEntrena = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -127,8 +129,10 @@ public class NuevoEntrenador extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(Btn_AñadirEntrenador, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                                .addComponent(MensajeCon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MensajeViaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(MensajeViaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(MensajeJuega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(MensajeEntrena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(Btn_Regresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
@@ -160,10 +164,14 @@ public class NuevoEntrenador extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addComponent(Btn_AñadirEntrenador, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MensajeCon, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeViaja, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MensajeJuega, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MensajeEntrena, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(Btn_Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
@@ -199,15 +207,18 @@ public class NuevoEntrenador extends javax.swing.JFrame {
         String Apellidos = CdeT_Apellidos.getText();
         int Edad = Integer.parseInt(CdeT_Edad.getText());
         String idFederacion = CdeT_IDFed.getText();
+        NvoEntrenador.setProfesion("Entrenador");
         
         NvoEntrenador.setId(id);
         NvoEntrenador.setNombre(Nombre);
         NvoEntrenador.setApellidos(Apellidos);
         NvoEntrenador.setEdad(Edad);
         NvoEntrenador.setIdFederacion(idFederacion);
-
-        MensajeCon.setText((NvoEntrenador.Concentrarse()));
-        MensajeViaja.setText((NvoEntrenador.Viaja()));
+        
+        MensajeConcentrarse.setText(NvoEntrenador.Concentrarse());
+        MensajeViaja.setText(NvoEntrenador.Viaja());
+        MensajeEntrena.setText(NvoEntrenador.Entrenar());
+        MensajeJuega.setText(NvoEntrenador.jugarPartido());
 
         ArregloSeleccion.add(NvoEntrenador);
     }//GEN-LAST:event_Btn_AñadirEntrenadorActionPerformed
@@ -262,7 +273,9 @@ public class NuevoEntrenador extends javax.swing.JFrame {
     private javax.swing.JTextField CdeT_ID;
     private javax.swing.JTextField CdeT_IDFed;
     private javax.swing.JTextField CdeT_Nombre;
-    private javax.swing.JLabel MensajeCon;
+    private javax.swing.JLabel MensajeConcentrarse;
+    private javax.swing.JLabel MensajeEntrena;
+    private javax.swing.JLabel MensajeJuega;
     private javax.swing.JLabel MensajeViaja;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

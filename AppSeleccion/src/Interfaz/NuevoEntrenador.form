@@ -48,8 +48,10 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                               <Component id="Btn_AñadirEntrenador" alignment="0" pref="291" max="32767" attributes="0"/>
-                              <Component id="MensajeCon" alignment="0" max="32767" attributes="0"/>
+                              <Component id="MensajeConcentrarse" alignment="0" max="32767" attributes="0"/>
                               <Component id="MensajeViaja" alignment="0" max="32767" attributes="0"/>
+                              <Component id="MensajeJuega" alignment="0" max="32767" attributes="0"/>
+                              <Component id="MensajeEntrena" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="Btn_Regresar" alignment="0" min="-2" pref="291" max="-2" attributes="0"/>
                       </Group>
@@ -92,10 +94,14 @@
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="Btn_AñadirEntrenador" min="-2" pref="21" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="MensajeCon" min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="MensajeConcentrarse" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MensajeViaja" min="-2" pref="17" max="-2" attributes="0"/>
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="MensajeJuega" min="-2" pref="17" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="MensajeEntrena" min="-2" pref="17" max="-2" attributes="0"/>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
               <Component id="Btn_Regresar" min="-2" pref="18" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
@@ -131,7 +137,7 @@
         <Property name="text" type="java.lang.String" value="Edad"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="MensajeCon">
+    <Component class="javax.swing.JLabel" name="MensajeConcentrarse">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -172,6 +178,10 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_RegresarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="MensajeJuega">
+    </Component>
+    <Component class="javax.swing.JLabel" name="MensajeEntrena">
     </Component>
   </SubComponents>
 </Form>

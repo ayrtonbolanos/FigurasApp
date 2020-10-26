@@ -32,19 +32,28 @@ public class Entrenador extends Selección {
         this.idFederacion = idFederacion;
     }
     
-    //Concentrarse
+    //Métodos en Común
     
     @Override
-    public void Concentrarse(){
-        System.out.println("El ENTRENADOR va a la concentración.");
+    public String Concentrarse(){
+        return mnsjConcen;
     }
-
-    //Viajar
     
     @Override
-    public void Viaja(){
-        System.out.println("El ENTRENADOR va a la concentración.");
+    public String Viaja(){
+        return mnsjViaja;
     }
+    
+    @Override
+    public String Entrenar(){
+        return mnsjEntrena;
+    }
+    
+    @Override
+    public String jugarPartido(){
+        return mnsjJuega;
+    }
+    
     
     
 }

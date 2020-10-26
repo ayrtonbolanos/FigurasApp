@@ -1,9 +1,5 @@
 package Logic;
 
-/**
- *
- * @author ayrto
- */
 public class Rectangulo extends Figura {
     
     public Rectangulo(){
@@ -14,13 +10,13 @@ public class Rectangulo extends Figura {
     }
     
     
-        @Override
-    public void Area(int base, int altura){
+    @Override
+    public void Area() {
         area = (base*altura);
     }
 
-        @Override
-    public void Perimetro(int base, int altura){
-        perimetro= ((base*2)+(altura*2));
+    @Override
+    public void Perimetro() {
+                perimetro= (base*3);
     }
 }

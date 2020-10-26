@@ -5,7 +5,7 @@
  */
 package Interfaz;
 
-import static Logica.ArregloGlobal.ArregloSeleccion;
+import static Datos.ArregloGlobal.ArregloSeleccion;
 import Logica.*;
 
 /**
@@ -45,7 +45,7 @@ public class NuevoJugador extends javax.swing.JFrame {
         Btn_AñadirJugador = new javax.swing.JButton();
         MensajeJuega = new javax.swing.JLabel();
         MensajeEntrena = new javax.swing.JLabel();
-        MensajeConcentra = new javax.swing.JLabel();
+        MensajeConcentrarse = new javax.swing.JLabel();
         MensajeViaja = new javax.swing.JLabel();
         Btn_Regresar = new javax.swing.JButton();
 
@@ -142,7 +142,7 @@ public class NuevoJugador extends javax.swing.JFrame {
                             .addComponent(Btn_AñadirJugador, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                             .addComponent(MensajeJuega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(MensajeEntrena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MensajeConcentra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(MensajeViaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Btn_Regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(56, Short.MAX_VALUE))
@@ -183,7 +183,7 @@ public class NuevoJugador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeEntrena, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MensajeConcentra, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MensajeConcentrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeViaja, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
@@ -227,6 +227,7 @@ public class NuevoJugador extends javax.swing.JFrame {
         int Edad = Integer.parseInt(CdeT_Edad.getText());
         int dorsal = Integer.parseInt(CdeT_Dorsal.getText());
         String demarcacion = CdeT_Demarcación.getText();
+        NvoJugador.setProfesion("Juegador");
         
         NvoJugador.setId(id);
         NvoJugador.setNombre(Nombre);
@@ -234,11 +235,11 @@ public class NuevoJugador extends javax.swing.JFrame {
         NvoJugador.setEdad(Edad);
         NvoJugador.setDorsal(dorsal);
         NvoJugador.setDemarcacion(demarcacion);
-
-        MensajeJuega.setText((NvoJugador.jugarPartido()));
-        MensajeEntrena.setText((NvoJugador.entrenar()));
-        MensajeConcentra.setText((NvoJugador.Concentrarse()));
-        MensajeViaja.setText((NvoJugador.Viaja()));
+        
+        MensajeConcentrarse.setText(NvoJugador.Concentrarse());
+        MensajeViaja.setText(NvoJugador.Viaja());
+        MensajeEntrena.setText(NvoJugador.Entrenar());
+        MensajeJuega.setText(NvoJugador.jugarPartido());
 
 
         ArregloSeleccion.add(NvoJugador);
@@ -295,7 +296,7 @@ public class NuevoJugador extends javax.swing.JFrame {
     private javax.swing.JTextField CdeT_Edad;
     private javax.swing.JTextField CdeT_ID;
     private javax.swing.JTextField CdeT_Nombre;
-    private javax.swing.JLabel MensajeConcentra;
+    private javax.swing.JLabel MensajeConcentrarse;
     private javax.swing.JLabel MensajeEntrena;
     private javax.swing.JLabel MensajeJuega;
     private javax.swing.JLabel MensajeViaja;

@@ -16,13 +16,13 @@ public class Triangulo extends Figura {
     }
     
         @Override
-    public void Area(int base, int altura){
+    public void Area() {
         area = (base*altura)/2;
     }
-    
-        @Override
-    public void Perimetro(int base, int altura){
-        perimetro= (base*3);
+
+    @Override
+    public void Perimetro() {
+       perimetro= (base*3);
     }
 
 
